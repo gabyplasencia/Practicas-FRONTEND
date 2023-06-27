@@ -6,8 +6,39 @@
     <title>Accordion</title>
     <link rel="stylesheet" href="main.css">
     <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     
+    <div class="wrapper">
+        <div class="accordion">
+            <div class="accordion-panel">
+                
+                <h2 id="panel1-heading">
+
+                    <button class="accordion-trigger" 
+                    aria-controls="panel1-content" aria-expanded="true">
+                        <span id="panel1-content">Boating</span>
+                        <i aria-hidden="true" class="accordion-icon"></i>
+                    </button>
+
+                </h2>
+
+                <div class="accordion-content" 
+                     id="panel1-content"
+                     aria-labelledby="panel1-heading" aria-hidden="false"
+                     role="region">
+
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Reiciendis quod molestias ducimus veniam voluptate non.
+                    </p>
+                    <img class="accordion-img" alt="A boat">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
