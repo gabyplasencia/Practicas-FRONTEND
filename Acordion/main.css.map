@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sources":["_globals.scss","main.css"],"names":[],"mappings":"AAMA;EACI,SAAA;EACA,UAAA;ACLJ;;ADQA;EACI,mJAAA;EACA,sCAbO;EAcP,gBAAA;ACLJ;;ADQA;EACI,gBAAA;EACA,mBAAA;EACA,oBAAA;ACLJ;ADMI;EACI,eAAA;EACA,cAAA;ACJR","file":"main.css"}
