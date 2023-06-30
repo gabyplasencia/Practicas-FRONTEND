@@ -1,6 +1,8 @@
+@import "components";
+
 $bg-color: rgba(0, 0, 0, 0.725);
 
-
+$panel-padding: 0.75rem;
 
 
 
@@ -25,7 +27,7 @@ body {
         max-width: 100%;
         display: block;
     }
-     p , span , button{
+     p , span{
         padding: 0.4rem;
      }
 }
@@ -39,7 +41,8 @@ body {
 .accordion-panel{
     position: relative;
     isolation: isolate;
-    flex-basis: 3.5rem;
+    flex-basis: (($panel-padding * 2) + $button-size);
+    padding: $panel-padding;
     overflow: hidden;
 
     .accordion-img{

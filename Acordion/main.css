@@ -1,3 +1,41 @@
+.accordion-trigger {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-icon {
+  background-color: rgba(0, 0, 0, 0.641);
+  fill: var(--_icon-color);
+  padding: 0.5rem;
+  width: 1.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.accordion-panel:nth-child(1) {
+  --_icon-color: rgb(108, 212, 238);
+}
+
+.accordion-panel:nth-child(2) {
+  --_icon-color: rgb(212, 48, 48);
+}
+
+.accordion-panel:nth-child(3) {
+  --_icon-color: rgb(93, 234, 69);
+}
+
+.accordion-panel:nth-child(4) {
+  --_icon-color: rgb(194, 102, 212);
+}
+
+.accordion-panel:nth-child(5) {
+  --_icon-color: rgb(239, 137, 59);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +57,7 @@ body {
   max-width: 100%;
   display: block;
 }
-.wrapper p, .wrapper span, .wrapper button {
+.wrapper p, .wrapper span {
   padding: 0.4rem;
 }
 
@@ -32,7 +70,8 @@ body {
 .accordion-panel {
   position: relative;
   isolation: isolate;
-  flex-basis: 3.5rem;
+  flex-basis: 4.5rem;
+  padding: 0.75rem;
   overflow: hidden;
 }
 .accordion-panel .accordion-img {
@@ -46,6 +85,10 @@ body {
 }
 
 .accordion-trigger {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.3rem;
   background-color: transparent;
   border: none;
 }
@@ -53,7 +96,7 @@ body {
 .accordion-icon {
   background-color: rgba(0, 0, 0, 0.641);
   fill: var(--_icon-color);
-  padding: 0.4rem;
+  padding: 0.5rem;
   width: 1.7rem;
   aspect-ratio: 1;
   border-radius: 50%;

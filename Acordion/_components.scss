@@ -1,7 +1,11 @@
-
+$button-size: 3rem;
 
 
 .accordion-trigger{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.3rem;
     background-color: transparent;
     border: none;
 }
@@ -9,7 +13,7 @@
 .accordion-icon{
     background-color: rgba(0, 0, 0, 0.641);
     fill: var(--_icon-color);
-    padding: 0.4rem;
+    padding: 0.5rem;
     width: 1.7rem;
     aspect-ratio: 1;
     border-radius: 50%;
