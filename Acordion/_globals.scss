@@ -2,7 +2,9 @@
 
 $bg-color: rgba(0, 0, 0, 0.725);
 
-$panel-padding: 0.4rem;
+$panel-padding: 0.5rem;
+
+$animation-time: 400ms;
 
 
 
@@ -44,10 +46,11 @@ body {
 .accordion-panel{
     position: relative;
     isolation: isolate;
-    flex-basis: (($panel-padding *2) + $button-size);
+    flex-basis: (($panel-padding * 2) + $button-size);
     padding: $panel-padding;
-    border-radius: ((($panel-padding) + $button-size) / 2);
+    border-radius: ((($panel-padding * 2) + $button-size));
     overflow: hidden;
+    transition: flex-basis $animation-time, border-radius $animation-time;
 
     .accordion-img{
         position: absolute;
@@ -61,9 +64,17 @@ body {
     p {
         transform: translateY(2rem);
         opacity: 0;
+        transition: all $animation-time;
     }
+
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
     flex-basis: clamp(15rem, 30vw , 20rem);
+    border-radius: ((($panel-padding * 2) + $button-size) / 2);
+
+    p{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
   }

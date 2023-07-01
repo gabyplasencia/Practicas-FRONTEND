@@ -13,8 +13,8 @@ $button-size: 2rem;
 .accordion-icon{
     background-color: rgba(0, 0, 0, 0.641);
     fill: var(--_icon-color);
+    width: $button-size;
     padding: 0.5rem;
-    width: 1.7rem;
     aspect-ratio: 1;
     border-radius: 50%;
 }
