@@ -31,7 +31,6 @@ body {
         display: block;
     }
      p , span{
-        padding: 0.4rem;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: azure;
      }
@@ -46,11 +45,16 @@ body {
 .accordion-panel{
     position: relative;
     isolation: isolate;
-    flex-basis: (($panel-padding * 2) + $button-size);
+    flex-basis: calc(($panel-padding * 2) + $icon-size);
     padding: $panel-padding;
-    border-radius: ((($panel-padding * 2) + $button-size));
+    border-radius: calc((($panel-padding * 2) + $icon-size + $icon-padding));
     overflow: hidden;
     transition: flex-basis $animation-time, border-radius $animation-time;
+
+    .title{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
 
     .accordion-img{
         position: absolute;
@@ -62,6 +66,7 @@ body {
     }
 
     p {
+        margin-left: calc($icon-size + $trigger-gap + $icon-padding + $panel-padding);
         transform: translateY(2rem);
         opacity: 0;
         transition: all $animation-time;
@@ -71,7 +76,7 @@ body {
 
 .accordion-panel:has([aria-expanded="true"]) {
     flex-basis: clamp(15rem, 30vw , 20rem);
-    border-radius: ((($panel-padding * 2) + $button-size) / 2);
+    border-radius: calc((($panel-padding * 2) + $icon-size + $icon-padding) / 2);
 
     p{
         transform: translateY(0rem);

@@ -1,11 +1,12 @@
-$button-size: 2rem;
-
+$icon-size: 1.5rem;
+$trigger-gap: 0.5rem;
+$icon-padding: 0.5rem;
 
 .accordion-trigger{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 0.3rem;
+    gap: $trigger-gap;
     background-color: transparent;
     border: none;
 }
@@ -13,8 +14,8 @@ $button-size: 2rem;
 .accordion-icon{
     background-color: rgba(0, 0, 0, 0.641);
     fill: var(--_icon-color);
-    width: $button-size;
-    padding: 0.5rem;
+    width: $icon-size;
+    padding: $icon-padding;
     aspect-ratio: 1;
     border-radius: 50%;
 }
