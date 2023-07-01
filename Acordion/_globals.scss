@@ -63,10 +63,13 @@ body {
         height: 100%;
         object-fit: cover;
         z-index: -1;
+        transition: filter $animation-time;
     }
 
     p {
+        margin-top: 0.2rem;
         margin-left: calc($icon-size + $trigger-gap + $icon-padding + $panel-padding);
+        width: 85%;
         transform: translateY(2rem);
         opacity: 0;
         transition: all $animation-time;
@@ -81,5 +84,9 @@ body {
     p{
         transform: translateY(0rem);
         opacity: 1;
+    }
+
+    .accordion-img{
+        filter:brightness(0.5);
     }
   }

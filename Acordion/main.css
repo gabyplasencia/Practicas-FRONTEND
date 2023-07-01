@@ -90,9 +90,12 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+  transition: filter 400ms;
 }
 .accordion-panel p {
+  margin-top: 0.2rem;
   margin-left: 3rem;
+  width: 85%;
   transform: translateY(2rem);
   opacity: 0;
   transition: all 400ms;
@@ -105,6 +108,9 @@ body {
 .accordion-panel:has([aria-expanded=true]) p {
   transform: translateY(0rem);
   opacity: 1;
+}
+.accordion-panel:has([aria-expanded=true]) .accordion-img {
+  filter: brightness(0.5);
 }
 
 .accordion-trigger {
