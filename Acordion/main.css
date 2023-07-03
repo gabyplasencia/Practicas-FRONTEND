@@ -50,7 +50,7 @@ body {
 }
 
 .wrapper {
-  max-width: 50rem;
+  max-width: 60rem;
   margin-inline: auto;
   margin-top: 3rem;
   padding-inline: 1rem;
@@ -60,7 +60,7 @@ body {
   display: block;
 }
 .wrapper p, .wrapper span {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui;
   color: azure;
 }
 
@@ -86,15 +86,17 @@ body {
   display: grid;
   align-items: center;
 }
-.accordion-panel .title::after {
-  content: " ";
-  position: absolute;
-  left: -3rem;
-  height: 2.5rem;
-  width: calc(100% + 4rem);
-  background-color: rgba(0, 0, 0, 0.497);
-  border-radius: 2.5rem;
-  z-index: -1;
+@media (max-width: 850px) {
+  .accordion-panel .title::after {
+    content: " ";
+    position: absolute;
+    left: -3rem;
+    height: 2.5rem;
+    width: calc(100% + 4rem);
+    background-color: rgba(0, 0, 0, 0.497);
+    border-radius: 2.5rem;
+    z-index: -1;
+  }
 }
 .accordion-panel .accordion-img {
   position: absolute;
@@ -116,8 +118,9 @@ body {
 }
 
 .accordion-panel:has([aria-expanded=true]) {
-  flex-basis: clamp(15rem, 30vw, 20rem);
+  flex-basis: clamp(20rem, 40vh, 30rem);
   border-radius: 1.5rem;
+  flex-grow: 1;
 }
 .accordion-panel:has([aria-expanded=true]) p {
   transform: translateY(0rem);
@@ -127,6 +130,11 @@ body {
   filter: brightness(0.5);
 }
 
+@media (min-width: 851px) {
+  .accordion {
+    flex-direction: row;
+  }
+}
 .accordion-trigger {
   display: flex;
   flex-direction: row-reverse;

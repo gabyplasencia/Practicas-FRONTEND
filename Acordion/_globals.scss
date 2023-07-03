@@ -21,7 +21,7 @@ body {
 }
 
 .wrapper {
-    max-width: 50rem;
+    max-width: 60rem;
     margin-inline: auto;
     margin-top: 3rem;
     padding-inline: 1rem;
@@ -31,7 +31,7 @@ body {
         display: block;
     }
      p , span{
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: system-ui;
         color: azure;
      }
 }
@@ -59,17 +59,20 @@ body {
         display: grid;
         align-items: center;
     }
-
-    .title::after{
-        content: " ";
-        position: absolute;
-        left: calc(($panel-padding + ($icon-size + ($icon-padding * 2))) * -1);
-        height: calc(($icon-size + ($icon-padding * 2)));
-        width: calc(100% + (($icon-size + $icon-padding) * 2));
-        background-color: rgba(0, 0, 0, 0.497);
-        border-radius: calc($icon-size + ($icon-padding * 2));
-        z-index: -1;
+    
+    @media (max-width: 850px){
+        .title::after{
+            content: " ";
+            position: absolute;
+            left: calc(($panel-padding + ($icon-size + ($icon-padding * 2))) * -1);
+            height: calc(($icon-size + ($icon-padding * 2)));
+            width: calc(100% + (($icon-size + $icon-padding) * 2));
+            background-color: rgba(0, 0, 0, 0.497);
+            border-radius: calc($icon-size + ($icon-padding * 2));
+            z-index: -1;
+        }
     }
+    
 
     .accordion-img{
         position: absolute;
@@ -93,9 +96,9 @@ body {
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
-    flex-basis: clamp(15rem, 30vw , 20rem);
+    flex-basis: clamp(20rem, 40vh , 30rem);
     border-radius: calc((($panel-padding * 2) + $icon-size + $icon-padding) / 2);
-
+    flex-grow: 1;
     p{
         transform: translateY(0rem);
         opacity: 1;
@@ -105,3 +108,9 @@ body {
         filter:brightness(0.5);
     }
   }
+
+@media(min-width: 851px){
+    .accordion{
+        flex-direction: row;
+    }
+}
