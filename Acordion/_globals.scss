@@ -54,6 +54,21 @@ body {
     .title{
         font-size: 1.3rem;
         font-weight: 500;
+        position: relative;
+
+        display: grid;
+        align-items: center;
+    }
+
+    .title::after{
+        content: " ";
+        position: absolute;
+        left: calc(($panel-padding + ($icon-size + ($icon-padding * 2))) * -1);
+        height: calc(($icon-size + ($icon-padding * 2)));
+        width: calc(100% + (($icon-size + $icon-padding) * 2));
+        background-color: rgba(0, 0, 0, 0.497);
+        border-radius: calc($icon-size + ($icon-padding * 2));
+        z-index: -1;
     }
 
     .accordion-img{

@@ -9,10 +9,11 @@ $icon-padding: 0.5rem;
     gap: $trigger-gap;
     background-color: transparent;
     border: none;
+    isolation: isolate;
 }
 
 .accordion-icon{
-    background-color: rgba(0, 0, 0, 0.641);
+    background-color: rgba(0, 0, 0, 0.223);
     fill: var(--_icon-color);
     width: $icon-size;
     padding: $icon-padding;
