@@ -4,7 +4,8 @@ $bg-color: rgba(0, 0, 0, 0.725);
 
 $panel-padding: 0.5rem;
 
-$animation-time: 400ms;
+$animation-time: 500ms;
+$animation-delay: 500ms;
 
 
 
@@ -14,7 +15,8 @@ $animation-time: 400ms;
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui;
+    font-size: 1.2rem;
     background-color: $bg-color;
     color: azure;
     line-height: 1.3;
@@ -49,7 +51,7 @@ body {
     padding: $panel-padding;
     border-radius: calc((($panel-padding * 2) + $icon-size + $icon-padding));
     overflow: hidden;
-    transition: flex-basis $animation-time, border-radius $animation-time;
+    transition: all $animation-time;
 
     .title{
         font-size: 1.3rem;
@@ -84,19 +86,19 @@ body {
         transition: filter $animation-time;
     }
 
-    p {
-        margin-top: 0.2rem;
+    p { 
+        margin-top: $panel-padding;
         margin-left: calc($icon-size + $trigger-gap + $icon-padding + $panel-padding);
         width: 85%;
-        transform: translateY(2rem);
+        transform: translateY(5rem);
         opacity: 0;
-        transition: all $animation-time;
+        transition: all $animation-time $animation-delay;
     }
 
 }
 
 .accordion-panel:has([aria-expanded="true"]) {
-    flex-basis: clamp(20rem, 40vh , 30rem);
+    flex-basis: clamp(20rem, 35vh , 35rem);
     border-radius: calc((($panel-padding * 2) + $icon-size + $icon-padding) / 2);
     flex-grow: 1;
     p{
@@ -112,5 +114,20 @@ body {
 @media(min-width: 851px){
     .accordion{
         flex-direction: row;
+        height: 35rem;
+
+        p { 
+            transform: translateX(100% * 1.5);
+            opacity: 0;
+            transition: transform $animation-time $animation-delay, opacity $animation-time;
+        }
+
+        .accordion-panel:has([aria-expanded="true"]) {
+            p{
+                transform: translateX(0rem);
+                opacity: 1;
+            }
+          }
+        
     }
 }
