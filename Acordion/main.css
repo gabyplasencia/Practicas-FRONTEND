@@ -9,12 +9,18 @@
 }
 
 .accordion-icon {
-  background-color: rgba(0, 0, 0, 0.223);
+  background-color: rgba(0, 0, 0, 0.327);
   fill: var(--_icon-color);
   width: 1.5rem;
   padding: 0.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+.img-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .accordion-panel:nth-child(1) {
@@ -73,6 +79,8 @@ body {
 }
 
 .accordion-panel {
+  display: flex;
+  flex-direction: column;
   position: relative;
   isolation: isolate;
   flex-basis: 2.5rem;
@@ -158,12 +166,18 @@ body {
 }
 
 .accordion-icon {
-  background-color: rgba(0, 0, 0, 0.223);
+  background-color: rgba(0, 0, 0, 0.327);
   fill: var(--_icon-color);
   width: 1.5rem;
   padding: 0.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+.img-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .accordion-panel:nth-child(1) {
