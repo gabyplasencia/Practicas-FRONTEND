@@ -10,3 +10,20 @@ tabButtons.forEach((tab, index) => {
         tabPanels[index].setAttribute("hidden", "");
     }
 })
+
+tabsContainer.addEventListener("click", (e) => {
+    const clickedTab = e.target.closest("a");
+    if(!clickedTab) return;
+    e.preventDefault();
+
+    switchTab(clickedTab);
+})
+
+function switchTab(newTab){
+    const activePanelId = newTab.getAttribute("href");
+    const activePanel = tabsContainer.querySelector(activePanelId);
+    tabPanels.forEach((panel) => {
+        panel.setAttribute("hidden", true);
+    });
+    activePanel.removeAttribute("hidden");
+}
