@@ -2,46 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Social Media Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
+
 <body>
+  <header>
+    <h1 class="title--app">Social Media Dashboard</h1>
+    <p class="subtitle">Total Followers: 23,004</p>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+    <p>Dark Mode TOGGLE</p>
+  </header>
 
-  Dark Mode
+  <main>
+    <section class="follower-section">
+        <div class="card card--follower">
+          <div class="app-username">
+            <img src="images/icon-facebook.svg" alt="facebook icon" class="app-icon">
+            <h3 class="username">@nathanf</h3> 
+          </div>
+          <p class="followers-number">1987</p>
+          <p class="app-follow-name">Followers</p>
+          <p class="stats"><img src="images/icon-up.svg" alt="up symbol" class="stat-symbol"><span>12 Today</span></p>
+        </div>
+
+        <div class="card card--follower">
+          <div class="app-username">
+            <img src="images/icon-twitter.svg" alt="twitter icon" class="app-icon">
+            <h3 class="username">@nathanf</h3> 
+          </div>
+          <p class="followers-number">1044</p>
+          <p class="app-follow-name">Followers</p>
+          <p class="stats"><img src="images/icon-up.svg" alt="up symbol" class="stat-symbol"><span>99 Today</span></p>
+        </div>
+
+        <div class="card card--follower">
+          <div class="app-username">
+            <img src="images/icon-instagram.svg" alt="instagram icon" class="app-icon">
+            <h3 class="username">@realnathanf</h3> 
+          </div>
+          <p class="followers-number">11k</p>
+          <p class="app-follow-name">Followers</p>
+          <p class="stats"><img src="images/icon-up.svg" alt="up symbol" class="stat-symbol"><span>1099 Today</span></p>
+        </div>
+
+        <div class="card card--follower">
+          <div class="app-username">
+            <img src="images/icon-youtube.svg" alt="youtube icon" class="app-icon">
+            <h3 class="username">Nathan F.</h3> 
+          </div>
+          <p class="followers-number">8239</p>
+          <p class="app-follow-name">Subscribers</p>
+          <p class="stats"><img src="images/icon-down.svg" alt="down symbol" class="stat-symbol"><span>144 Today</span></p>
+        </div>
+    </section>
+
+  </main>
+  
 
   
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+  
 
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+  
 
 
 
@@ -81,7 +107,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/gabyplasencia" target="_blank">Gabriela Plasecia</a>.
   </div>
 </body>
 </html>
