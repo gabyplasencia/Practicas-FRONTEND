@@ -5,20 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Social Media Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script defer src="main.js"></script>
 </head>
 
 <body>
   <header>
-    <h1 class="header__title">Social Media Dashboard</h1>
-    <p class="header__subtitle">Total Followers: 23,004</p>
-
-    <p>Dark Mode TOGGLE</p>
+    <div class="container">
+      <h1 class="header__title">Social Media Dashboard</h1>
+      <p class="header__subtitle">Total Followers: 23,004</p>
+  
+      <p>Dark Mode TOGGLE</p>
+    </div>
   </header>
 
   <main>
-    <section class="follower-section">
+    <div class="container">
+      <section class="follower-section">
         <div class="card card--follower">
           <div class="app-username">
             <img src="images/icon-facebook.svg" alt="facebook icon" class="app-icon">
@@ -158,12 +161,15 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
   
   <footer>
-    <div class="attribution">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>   
-      <p>Coded by <a href="https://github.com/gabyplasencia" target="_blank">Gabriela Plasecia</a>.</p>  
+    <div class="container">
+      <div class="attribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>   
+        <p>Coded by <a href="https://github.com/gabyplasencia" target="_blank">Gabriela Plasecia</a>.</p>  
+      </div>
     </div>
   </footer>
 </body>
